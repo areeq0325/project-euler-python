@@ -5,7 +5,7 @@
 # Find the largest palindrome made from the product of two 3-digit numbers.
 ###############################################################################
 
-def largest_palindrome(digits):
+def largest_palindrome_product(digits):
     largest = 0
     for i in range((10 ** digits) - 1, (10 ** (digits - 1)) - 1, -1):
         for j in range((10 ** digits) - 1, (10 ** (digits - 1)) - 1, -1):
@@ -13,4 +13,4 @@ def largest_palindrome(digits):
                 largest = max(i * j, largest)
     return largest
 
-print(largest_palindrome(3))
+print(largest_palindrome_product(3))
